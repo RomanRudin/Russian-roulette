@@ -85,7 +85,11 @@ short choice()
         print("\nHow many bullets do you need? It's maximum 6 bullets in the cylinder..", true);
         short amount;
         std::cin >> amount;
-        if (amount >= 6)
+        if (amount <= 0 || amount == 69)
+        {
+            print("\nFunny enough.", true);
+        }
+        else if (amount >= 6)
         {
             print("\nARE YOU SURE?", true, 120000000);
             std::string answer;
@@ -94,10 +98,6 @@ short choice()
             {
                 return 6;
             }
-        }
-        else if (amount < 0)
-        {
-            print("\nFunny enough.", true);
         }
         else
         {
