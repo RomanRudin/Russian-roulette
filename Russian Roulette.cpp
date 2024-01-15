@@ -78,18 +78,6 @@ bool spinning()
     }
 }
 
-//void results_write(std::string status, int money)
-//{
-//    std::ofstream results("GameResults.txt", std::ios::app);
-//    std::string status;
-//
-//    while (results.is_open())
-//    {
-//        time_t seconds = time(NULL);;
-//        results << ctime(&seconds) << ", money earned: " << money << "$. Status: " << status << std::endl;
-//    }
-//}
-
 short choice()
 {
     while (true)
