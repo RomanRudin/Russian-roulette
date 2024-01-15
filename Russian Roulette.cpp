@@ -174,7 +174,7 @@ int main()
             game(bullets, money, round, game_desire);
         }
 
-        if (money >= 100 && quota_flag == false)
+        if (money >= 1200 && quota_flag == false)
         {
             print("\nYou earned enough.", true);
             quota_flag = true;
