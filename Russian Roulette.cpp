@@ -19,6 +19,20 @@ void print(std::string line, bool endl)
     }
 }
 
+void print(std::string line, bool endl, int nanosec)
+{
+    for (int i = 0; i < size(line); i++)
+    {
+        std::cout << line[i];
+        std::this_thread::sleep_for(std::chrono::nanoseconds(nanosec));
+    }
+
+    if (endl)
+    {
+        std::cout << std::endl;
+    }
+}
+
 bool spinning()
 {
     std::cout << "\nBrrrrrr.." << std::endl;
@@ -62,23 +76,39 @@ bool spinning()
 
 short choice()
 {
-    print("\nHow many bullets do you need? It's maximum 6 bullets in the cylinder..", true);
-    short amount;
-    std::cin >> amount;
-    return amount;
+    while (true)
+    {
+        print("\nHow many bullets do you need? It's maximum 6 bullets in the cylinder..", true);
+        short amount;
+        std::cin >> amount;
+        if (amount == 6)
+        {
+            print("\nARE YOU SURE?", true, 120000000);
+            std::string answer;
+            std::cin >> answer;
+            if (answer == "YES")
+            {
+                return amount;
+            }
+        }
+        else
+        {
+            return amount;
+        }
+    }
 }
 
 void game(int bullets ,int &money, int &round, bool &game_desire) 
 {
     if (rand() % 6 + 1 > bullets)
     {
-        print("You survived.. For this time.", true);
+        print("\nYou survived.. For this time.", true);
         money += bullets * 100;
         round++;
     }
     else
     {
-        print("Died", true);
+        print("\nDied", true);
         game_desire = false;
     }
 }
