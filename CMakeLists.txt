@@ -8,3 +8,5 @@ set(CMAKE_CXX_EXTENSION OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 add_executable("${PROJECT_NAME}" Russian Roulette.cpp)
+
+file(COPY "GameResults" DESTINATION "/")
