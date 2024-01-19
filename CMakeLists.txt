@@ -7,6 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSION OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-add_executable("${PROJECT_NAME}" RussianRoulette.cpp)
+add_executable("${PROJECT_NAME}" RussianRoulette.cpp Functions.cpp Functions.h)
 
 file(COPY "GameResults.txt" DESTINATION "/")
