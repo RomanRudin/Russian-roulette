@@ -1,7 +1,7 @@
 # Russian-roulette
 Just a silly game  
   
-Controls:
+Controls:  
 Type "YES", if you agree to do something in the game  
 That's it.  
   
