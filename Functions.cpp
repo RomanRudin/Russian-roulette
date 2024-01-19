@@ -73,7 +73,7 @@ namespace df
             std::this_thread::sleep_for(std::chrono::nanoseconds(500000000));
             std::cout << "." << std::endl;
             std::this_thread::sleep_for(std::chrono::nanoseconds(900000000));
-            print("\nYou are not ready yet. But there is no escape.\n", true);
+            print("\nYou are not ready yet. But there is no escape.", true);
             std::this_thread::sleep_for(std::chrono::nanoseconds(300000000));
             return false;
         }
