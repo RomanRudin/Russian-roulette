@@ -19,8 +19,6 @@ int main()
     int round = 1;
     
     df::print("It's not important why you are here. But here is the rules:", true);
-
-    print("It's not important why you are here. But here is the rules:", true);
     std::this_thread::sleep_for(std::chrono::nanoseconds(500000000));
     df::print("There is a revolver, and you have to earn at least 1200$,", true);
     std::this_thread::sleep_for(std::chrono::nanoseconds(500000000));
